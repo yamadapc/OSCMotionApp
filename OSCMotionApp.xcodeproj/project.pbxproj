@@ -18,6 +18,36 @@
 		CB67C62D2BBCA67200643884 /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */; };
 		CB67C62F2BBCA73000643884 /* MusicMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62E2BBCA73000643884 /* MusicMessageService.swift */; };
 		CB67C6312BBCA7B800643884 /* OSCServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */; };
+		CB67C6352BBCAD8500643884 /* ConfigurationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6342BBCAD8500643884 /* ConfigurationState.swift */; };
+		CB67C6432BBCB08A00643884 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6812BB764E500321A56 /* GameState.swift */; };
+		CB67C6442BBCB08A00643884 /* BLEConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C952572D3170005A2A2 /* BLEConnection.swift */; };
+		CB67C6452BBCB08A00643884 /* VisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB68D2BB7657400321A56 /* VisualizerView.swift */; };
+		CB67C6462BBCB08A00643884 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C642572D24B0005A2A2 /* ContentView.swift */; };
+		CB67C6472BBCB08A00643884 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6852BB764F400321A56 /* GameScene.swift */; };
+		CB67C6482BBCB08A00643884 /* CircularBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6872BB7650400321A56 /* CircularBuffer.swift */; };
+		CB67C6492BBCB08A00643884 /* ConfigurationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6342BBCAD8500643884 /* ConfigurationState.swift */; };
+		CB67C64A2BBCB08A00643884 /* SCNVector3+operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6892BB7651800321A56 /* SCNVector3+operations.swift */; };
+		CB67C64B2BBCB08A00643884 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB67D2BB762E400321A56 /* Parser.swift */; };
+		CB67C64C2BBCB08A00643884 /* MotionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB68B2BB7653A00321A56 /* MotionState.swift */; };
+		CB67C64D2BBCB08A00643884 /* SensorDataPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */; };
+		CB67C64E2BBCB08A00643884 /* midiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB68F2BB765EF00321A56 /* midiManager.swift */; };
+		CB67C64F2BBCB08A00643884 /* MusicMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62E2BBCA73000643884 /* MusicMessageService.swift */; };
+		CB67C6502BBCB08A00643884 /* OSCMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C622572D24B0005A2A2 /* OSCMotionApp.swift */; };
+		CB67C6512BBCB08A00643884 /* WT901BLECL_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C6D2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld */; };
+		CB67C6522BBCB08A00643884 /* OSCServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */; };
+		CB67C6532BBCB08A00643884 /* SensorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6832BB764EA00321A56 /* SensorState.swift */; };
+		CB67C6542BBCB08A00643884 /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */; };
+		CB67C6562BBCB08A00643884 /* MIDIKitSMF in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63C2BBCB08A00643884 /* MIDIKitSMF */; };
+		CB67C6572BBCB08A00643884 /* MIDIKitIO in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63B2BBCB08A00643884 /* MIDIKitIO */; };
+		CB67C6582BBCB08A00643884 /* MIDIKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63E2BBCB08A00643884 /* MIDIKitUI */; };
+		CB67C6592BBCB08A00643884 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63F2BBCB08A00643884 /* OSCKit */; };
+		CB67C65A2BBCB08A00643884 /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63A2BBCB08A00643884 /* MIDIKitCore */; };
+		CB67C65B2BBCB08A00643884 /* OSCKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6412BBCB08A00643884 /* OSCKitCore */; };
+		CB67C65C2BBCB08A00643884 /* MIDIKitSync in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63D2BBCB08A00643884 /* MIDIKitSync */; };
+		CB67C65D2BBCB08A00643884 /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6392BBCB08A00643884 /* MIDIKitControlSurfaces */; };
+		CB67C65E2BBCB08A00643884 /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6372BBCB08A00643884 /* MIDIKit */; };
+		CB67C6602BBCB08A00643884 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738C9C692572D24C0005A2A2 /* Preview Assets.xcassets */; };
+		CB67C6612BBCB08A00643884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738C9C662572D24C0005A2A2 /* Assets.xcassets */; };
 		CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */; };
 		CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6E2BA9C9FC00297FAB /* MIDIKitControlSurfaces */; };
 		CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F702BA9C9FC00297FAB /* MIDIKitCore */; };
@@ -68,6 +98,9 @@
 		CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConfiguration.swift; sourceTree = "<group>"; };
 		CB67C62E2BBCA73000643884 /* MusicMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMessageService.swift; sourceTree = "<group>"; };
 		CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCServerConfiguration.swift; sourceTree = "<group>"; };
+		CB67C6342BBCAD8500643884 /* ConfigurationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationState.swift; sourceTree = "<group>"; };
+		CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCMotionAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB67C6662BBCB08A00643884 /* OSCMotionApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSCMotionApp copy-Info.plist"; path = "/Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/OSCMotionApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		CBDBB67D2BB762E400321A56 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataPacket.swift; sourceTree = "<group>"; };
 		CBDBB6812BB764E500321A56 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
@@ -111,6 +144,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB67C6552BBCB08A00643884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB67C6562BBCB08A00643884 /* MIDIKitSMF in Frameworks */,
+				CB67C6572BBCB08A00643884 /* MIDIKitIO in Frameworks */,
+				CB67C6582BBCB08A00643884 /* MIDIKitUI in Frameworks */,
+				CB67C6592BBCB08A00643884 /* OSCKit in Frameworks */,
+				CB67C65A2BBCB08A00643884 /* MIDIKitCore in Frameworks */,
+				CB67C65B2BBCB08A00643884 /* OSCKitCore in Frameworks */,
+				CB67C65C2BBCB08A00643884 /* MIDIKitSync in Frameworks */,
+				CB67C65D2BBCB08A00643884 /* MIDIKitControlSurfaces in Frameworks */,
+				CB67C65E2BBCB08A00643884 /* MIDIKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,6 +169,7 @@
 				738C9C612572D24B0005A2A2 /* OSCMotionApp */,
 				738C9C602572D24B0005A2A2 /* Products */,
 				CB67C6272BBCA64300643884 /* Frameworks */,
+				CB67C6662BBCB08A00643884 /* OSCMotionApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +179,7 @@
 				738C9C5F2572D24B0005A2A2 /* OSCMotionApp.app */,
 				738C9C752572D24C0005A2A2 /* OSCMotionAppTests.xctest */,
 				738C9C802572D24C0005A2A2 /* OSCMotionAppUITests.xctest */,
+				CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +257,7 @@
 				CB67C6252BBCA60800643884 /* SensorState */,
 				CBDBB6812BB764E500321A56 /* GameState.swift */,
 				CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */,
+				CB67C6342BBCAD8500643884 /* ConfigurationState.swift */,
 			);
 			path = state;
 			sourceTree = "<group>";
@@ -306,6 +358,34 @@
 			productReference = 738C9C802572D24C0005A2A2 /* OSCMotionAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CB67C6362BBCB08A00643884 /* OSCMotionAppMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB67C6622BBCB08A00643884 /* Build configuration list for PBXNativeTarget "OSCMotionAppMac" */;
+			buildPhases = (
+				CB67C6422BBCB08A00643884 /* Sources */,
+				CB67C6552BBCB08A00643884 /* Frameworks */,
+				CB67C65F2BBCB08A00643884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSCMotionAppMac;
+			packageProductDependencies = (
+				CB67C6372BBCB08A00643884 /* MIDIKit */,
+				CB67C6392BBCB08A00643884 /* MIDIKitControlSurfaces */,
+				CB67C63A2BBCB08A00643884 /* MIDIKitCore */,
+				CB67C63B2BBCB08A00643884 /* MIDIKitIO */,
+				CB67C63C2BBCB08A00643884 /* MIDIKitSMF */,
+				CB67C63D2BBCB08A00643884 /* MIDIKitSync */,
+				CB67C63E2BBCB08A00643884 /* MIDIKitUI */,
+				CB67C63F2BBCB08A00643884 /* OSCKit */,
+				CB67C6412BBCB08A00643884 /* OSCKitCore */,
+			);
+			productName = WT901BLECL_Demo;
+			productReference = CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -348,6 +428,7 @@
 				738C9C5E2572D24B0005A2A2 /* OSCMotionApp */,
 				738C9C742572D24C0005A2A2 /* OSCMotionAppTests */,
 				738C9C7F2572D24C0005A2A2 /* OSCMotionAppUITests */,
+				CB67C6362BBCB08A00643884 /* OSCMotionAppMac */,
 			);
 		};
 /* End PBXProject section */
@@ -376,6 +457,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB67C65F2BBCB08A00643884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB67C6602BBCB08A00643884 /* Preview Assets.xcassets in Resources */,
+				CB67C6612BBCB08A00643884 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -389,6 +479,7 @@
 				738C9C652572D24B0005A2A2 /* ContentView.swift in Sources */,
 				CBDBB6862BB764F400321A56 /* GameScene.swift in Sources */,
 				CBDBB6882BB7650400321A56 /* CircularBuffer.swift in Sources */,
+				CB67C6352BBCAD8500643884 /* ConfigurationState.swift in Sources */,
 				CBDBB68A2BB7651800321A56 /* SCNVector3+operations.swift in Sources */,
 				CBDBB67E2BB762E400321A56 /* Parser.swift in Sources */,
 				CBDBB68C2BB7653A00321A56 /* MotionState.swift in Sources */,
@@ -414,6 +505,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB67C6422BBCB08A00643884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB67C6432BBCB08A00643884 /* GameState.swift in Sources */,
+				CB67C6442BBCB08A00643884 /* BLEConnection.swift in Sources */,
+				CB67C6452BBCB08A00643884 /* VisualizerView.swift in Sources */,
+				CB67C6462BBCB08A00643884 /* ContentView.swift in Sources */,
+				CB67C6472BBCB08A00643884 /* GameScene.swift in Sources */,
+				CB67C6482BBCB08A00643884 /* CircularBuffer.swift in Sources */,
+				CB67C6492BBCB08A00643884 /* ConfigurationState.swift in Sources */,
+				CB67C64A2BBCB08A00643884 /* SCNVector3+operations.swift in Sources */,
+				CB67C64B2BBCB08A00643884 /* Parser.swift in Sources */,
+				CB67C64C2BBCB08A00643884 /* MotionState.swift in Sources */,
+				CB67C64D2BBCB08A00643884 /* SensorDataPacket.swift in Sources */,
+				CB67C64E2BBCB08A00643884 /* midiManager.swift in Sources */,
+				CB67C64F2BBCB08A00643884 /* MusicMessageService.swift in Sources */,
+				CB67C6502BBCB08A00643884 /* OSCMotionApp.swift in Sources */,
+				CB67C6512BBCB08A00643884 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
+				CB67C6522BBCB08A00643884 /* OSCServerConfiguration.swift in Sources */,
+				CB67C6532BBCB08A00643884 /* SensorState.swift in Sources */,
+				CB67C6542BBCB08A00643884 /* MessageConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +793,58 @@
 			};
 			name = Release;
 		};
+		CB67C6632BBCB08A00643884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OSCMotionApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Q39U2SBP6Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "OSCMotionApp copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beijaflor.OSCMotionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB67C6642BBCB08A00643884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OSCMotionApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Q39U2SBP6Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "OSCMotionApp copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beijaflor.OSCMotionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -716,10 +884,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		CB67C6622BBCB08A00643884 /* Build configuration list for PBXNativeTarget "OSCMotionAppMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB67C6632BBCB08A00643884 /* Debug */,
+				CB67C6642BBCB08A00643884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
 		CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/OSCKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/MIDIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.5;
+			};
+		};
+		CB67C6402BBCB08A00643884 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/orchetect/OSCKit";
 			requirement = {
@@ -746,6 +939,51 @@
 		CB67C62A2BBCA64300643884 /* OSCKitCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKitCore;
+		};
+		CB67C6372BBCB08A00643884 /* MIDIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKit;
+		};
+		CB67C6392BBCB08A00643884 /* MIDIKitControlSurfaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKitControlSurfaces;
+		};
+		CB67C63A2BBCB08A00643884 /* MIDIKitCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKitCore;
+		};
+		CB67C63B2BBCB08A00643884 /* MIDIKitIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKitIO;
+		};
+		CB67C63C2BBCB08A00643884 /* MIDIKitSMF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKitSMF;
+		};
+		CB67C63D2BBCB08A00643884 /* MIDIKitSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKitSync;
+		};
+		CB67C63E2BBCB08A00643884 /* MIDIKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6382BBCB08A00643884 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKitUI;
+		};
+		CB67C63F2BBCB08A00643884 /* OSCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6402BBCB08A00643884 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKit;
+		};
+		CB67C6412BBCB08A00643884 /* OSCKitCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6402BBCB08A00643884 /* XCRemoteSwiftPackageReference "OSCKit" */;
 			productName = OSCKitCore;
 		};
 		CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */ = {

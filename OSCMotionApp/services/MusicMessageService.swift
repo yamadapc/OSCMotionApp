@@ -8,7 +8,6 @@
 import Foundation
 import MIDIKit
 import OSCKit
-import OSCKit
 
 class MusicMessageService {
   private let midiManager = MIDIManager(

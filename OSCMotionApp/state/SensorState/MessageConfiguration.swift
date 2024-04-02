@@ -8,25 +8,27 @@
 import Foundation
 import MIDIKit
 
-class MIDIMessageConfiguration: ObservableObject {
-  @Published var midiChannel: Int
-  @Published var midiCC: MIDIEvent.CC.Controller
-  @Published var midiRange: (Int, Int)
+class MIDIMessageConfiguration: Codable {
+  var midiChannel: Int
+  var midiCC: Int
+  var midiRangeStart: Int
+  var midiRangeEnd: Int
 
   init() {
     midiChannel = 1
-    midiCC = .generalPurpose1
-    midiRange = (0, 127)
+    midiCC = MIDIEvent.CC.Controller.generalPurpose1.number.intValue
+    midiRangeStart = 0
+    midiRangeEnd = 127
   }
 }
 
-class OSCMessageConfiguration: ObservableObject {
+class OSCMessageConfiguration: Codable {
   init() {}
 }
 
-class MessageConfiguration: ObservableObject, Identifiable {
-  @Published var id: String
-  @Published var midiConfiguration = MIDIMessageConfiguration()
+class MessageConfiguration: Identifiable, Codable {
+  var id: String
+  var midiConfiguration = MIDIMessageConfiguration()
 
   init(id: String) {
     self.id = id

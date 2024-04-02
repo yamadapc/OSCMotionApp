@@ -10,7 +10,6 @@
 
 import CoreBluetooth
 import Foundation
-import UIKit
 import os
 
 private let logger = Logger(

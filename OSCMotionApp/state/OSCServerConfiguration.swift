@@ -7,8 +7,8 @@
 
 import Foundation
 
-class OSCServerConfiguration: ObservableObject {
-  @Published var serverURL: String
+class OSCServerConfiguration: ObservableObject, Codable {
+  var serverURL: String
 
   init(serverURL: String) {
     self.serverURL = serverURL

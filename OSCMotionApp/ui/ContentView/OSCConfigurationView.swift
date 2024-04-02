@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-fileprivate struct FormItem<C: View>: View {
+private struct FormItem<C: View>: View {
   var label: String
   var content: (String) -> C
 
@@ -20,7 +20,7 @@ fileprivate struct FormItem<C: View>: View {
   }
 }
 
-fileprivate let sensors: [MessageConfiguration] = [
+private let sensors: [MessageConfiguration] = [
   MessageConfiguration(id: "1"),
   MessageConfiguration(id: "2"),
   MessageConfiguration(id: "3"),
@@ -28,7 +28,7 @@ fileprivate let sensors: [MessageConfiguration] = [
   MessageConfiguration(id: "5"),
 ]
 
-fileprivate struct SensorConfigurationView: View {
+private struct SensorConfigurationView: View {
   @ObservedObject var state: MessageConfiguration
 
   var body: some View {

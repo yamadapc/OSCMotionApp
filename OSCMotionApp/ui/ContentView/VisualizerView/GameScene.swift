@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import SceneKit
 
 class GameScene: SCNScene {
@@ -19,7 +20,7 @@ class GameScene: SCNScene {
   override init() {
     super.init()
 
-    background.contents = UIColor.black
+    background.contents = Color.black
 
     setupCamera()
     addFloor()
@@ -37,7 +38,7 @@ class GameScene: SCNScene {
 
   func addFloor() {
     let floor = SCNNode(geometry: SCNFloor())
-    floor.geometry?.firstMaterial?.diffuse.contents = UIColor.gray
+    floor.geometry?.firstMaterial?.diffuse.contents = Color.gray
 
     rootNode.addChildNode(floor)
   }
@@ -48,7 +49,7 @@ class GameScene: SCNScene {
     let ambientLight = SCNLight()
 
     ambientLight.type = .ambient
-    ambientLight.color = UIColor.white
+    ambientLight.color = Color.white
     ambientLight.intensity = 72
 
     ambientLightNode.light = ambientLight
@@ -60,7 +61,7 @@ class GameScene: SCNScene {
     let spotLight = SCNLight()
 
     spotLight.type = .spot
-    spotLight.color = UIColor.orange
+    spotLight.color = Color.orange
     spotLight.intensity = 2700
     spotLight.spotInnerAngle = 20
     spotLight.spotOuterAngle = 272

@@ -1,0 +1,16 @@
+{
+  "oscServerConfiguration": {
+    "serverURL": "localhost"
+  },
+  "sensorsMessageConfiguration": [
+    {
+      "id": "1",
+      "midiConfiguration": {
+        "midiChannel": 1,
+        "midiCC": 16,
+        "midiRangeStart": 0,
+        "midiRangeEnd": 127
+      }
+    }
+  ]
+}

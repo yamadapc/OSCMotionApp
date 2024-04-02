@@ -16,18 +16,18 @@ struct ContentView: View {
   var bleConnection = BluetoothService()
   @ObservedObject var gameState = GameState()
   @State var isErrorShown: Bool = false
-  var oscServerConfiguration = OSCServerConfiguration(serverURL: "localhost")
+  var configuration = ConfigurationState.loadFromFile(url: URL(string: "file:///Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/config.json")!)
 
   var body: some View {
-      HStack {
-        if gameState.sensors.isEmpty {
-          Text("Searching for sensors...")
-        }
-
-        ForEach(Array(gameState.sensors.values)) { sensor in
-          VisualizerView(scene: sensor.scene)
-        }
+    HStack {
+      if gameState.sensors.isEmpty {
+        Text("Searching for sensors...")
       }
+
+      ForEach(Array(gameState.sensors.values)) { sensor in
+        VisualizerView(scene: sensor.scene)
+      }
+    }
     .onAppear {
       self.connectBLEDevice()
       do {
