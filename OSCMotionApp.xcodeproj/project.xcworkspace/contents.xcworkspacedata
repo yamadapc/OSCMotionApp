@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/yamadapc/Documents/Max 8/Projects/OSCMotion/app/OSCMotionApp.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

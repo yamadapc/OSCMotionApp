@@ -19,6 +19,10 @@ struct ContentView: View {
 
   var body: some View {
     HStack {
+      if gameState.sensors.isEmpty {
+        Text("Searching for sensors...")
+      }
+
       ForEach(Array(gameState.sensors.values)) { sensor in
         VisualizerView(scene: sensor.scene)
       }
