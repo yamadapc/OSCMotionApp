@@ -13,6 +13,11 @@
 		738C9C6A2572D24C0005A2A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738C9C692572D24C0005A2A2 /* Preview Assets.xcassets */; };
 		738C9C6F2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C6D2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld */; };
 		738C9C962572D3170005A2A2 /* BLEConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C952572D3170005A2A2 /* BLEConnection.swift */; };
+		CB67C6292BBCA64300643884 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6282BBCA64300643884 /* OSCKit */; };
+		CB67C62B2BBCA64300643884 /* OSCKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C62A2BBCA64300643884 /* OSCKitCore */; };
+		CB67C62D2BBCA67200643884 /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */; };
+		CB67C62F2BBCA73000643884 /* MusicMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62E2BBCA73000643884 /* MusicMessageService.swift */; };
+		CB67C6312BBCA7B800643884 /* OSCServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */; };
 		CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */; };
 		CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6E2BA9C9FC00297FAB /* MIDIKitControlSurfaces */; };
 		CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F702BA9C9FC00297FAB /* MIDIKitCore */; };
@@ -60,6 +65,9 @@
 		738C9C752572D24C0005A2A2 /* OSCMotionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCMotionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		738C9C802572D24C0005A2A2 /* OSCMotionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCMotionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		738C9C952572D3170005A2A2 /* BLEConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnection.swift; sourceTree = "<group>"; };
+		CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConfiguration.swift; sourceTree = "<group>"; };
+		CB67C62E2BBCA73000643884 /* MusicMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMessageService.swift; sourceTree = "<group>"; };
+		CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCServerConfiguration.swift; sourceTree = "<group>"; };
 		CBDBB67D2BB762E400321A56 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataPacket.swift; sourceTree = "<group>"; };
 		CBDBB6812BB764E500321A56 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
@@ -80,7 +88,9 @@
 				CBCB3F752BA9C9FC00297FAB /* MIDIKitSMF in Frameworks */,
 				CBCB3F732BA9C9FC00297FAB /* MIDIKitIO in Frameworks */,
 				CBCB3F792BA9C9FC00297FAB /* MIDIKitUI in Frameworks */,
+				CB67C6292BBCA64300643884 /* OSCKit in Frameworks */,
 				CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */,
+				CB67C62B2BBCA64300643884 /* OSCKitCore in Frameworks */,
 				CBCB3F772BA9C9FC00297FAB /* MIDIKitSync in Frameworks */,
 				CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */,
 				CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */,
@@ -109,6 +119,7 @@
 			children = (
 				738C9C612572D24B0005A2A2 /* OSCMotionApp */,
 				738C9C602572D24B0005A2A2 /* Products */,
+				CB67C6272BBCA64300643884 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +157,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CB67C6252BBCA60800643884 /* SensorState */ = {
+			isa = PBXGroup;
+			children = (
+				CBDBB68B2BB7653A00321A56 /* MotionState.swift */,
+				CBDBB6832BB764EA00321A56 /* SensorState.swift */,
+				CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */,
+			);
+			path = SensorState;
+			sourceTree = "<group>";
+		};
+		CB67C6272BBCA64300643884 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBDBB6912BB7660600321A56 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,9 +203,9 @@
 		CBDBB6942BB7665700321A56 /* state */ = {
 			isa = PBXGroup;
 			children = (
-				CBDBB68B2BB7653A00321A56 /* MotionState.swift */,
+				CB67C6252BBCA60800643884 /* SensorState */,
 				CBDBB6812BB764E500321A56 /* GameState.swift */,
-				CBDBB6832BB764EA00321A56 /* SensorState.swift */,
+				CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */,
 			);
 			path = state;
 			sourceTree = "<group>";
@@ -196,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDBB6972BB7669400321A56 /* bluetooth */,
+				CB67C62E2BBCA73000643884 /* MusicMessageService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -234,6 +263,8 @@
 				CBCB3F742BA9C9FC00297FAB /* MIDIKitSMF */,
 				CBCB3F762BA9C9FC00297FAB /* MIDIKitSync */,
 				CBCB3F782BA9C9FC00297FAB /* MIDIKitUI */,
+				CB67C6282BBCA64300643884 /* OSCKit */,
+				CB67C62A2BBCA64300643884 /* OSCKitCore */,
 			);
 			productName = WT901BLECL_Demo;
 			productReference = 738C9C5F2572D24B0005A2A2 /* OSCMotionApp.app */;
@@ -308,6 +339,7 @@
 			mainGroup = 738C9C562572D24B0005A2A2;
 			packageReferences = (
 				CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */,
+				CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */,
 			);
 			productRefGroup = 738C9C602572D24B0005A2A2 /* Products */;
 			projectDirPath = "";
@@ -362,9 +394,12 @@
 				CBDBB68C2BB7653A00321A56 /* MotionState.swift in Sources */,
 				CBDBB6802BB762FE00321A56 /* SensorDataPacket.swift in Sources */,
 				CBDBB6902BB765EF00321A56 /* midiManager.swift in Sources */,
+				CB67C62F2BBCA73000643884 /* MusicMessageService.swift in Sources */,
 				738C9C632572D24B0005A2A2 /* OSCMotionApp.swift in Sources */,
 				738C9C6F2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
+				CB67C6312BBCA7B800643884 /* OSCServerConfiguration.swift in Sources */,
 				CBDBB6842BB764EA00321A56 /* SensorState.swift in Sources */,
+				CB67C62D2BBCA67200643884 /* MessageConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +719,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/OSCKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 		CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/orchetect/MIDIKit";
@@ -695,6 +738,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB67C6282BBCA64300643884 /* OSCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKit;
+		};
+		CB67C62A2BBCA64300643884 /* OSCKitCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKitCore;
+		};
 		CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */;

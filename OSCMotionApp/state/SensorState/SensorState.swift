@@ -7,6 +7,7 @@
 
 import Foundation
 import MIDIKit
+import OSCKit
 import SceneKit
 
 private func eulerToQuaternion(pitch: Float, roll: Float, yaw: Float) -> SCNQuaternion {

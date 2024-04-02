@@ -7,6 +7,17 @@
 
 import SceneKit
 
+enum MotionParameter {
+  case velocity
+  case acceleration
+  case anglesState
+}
+
+/**
+ * The state of a sensor motion only.
+ *
+ * See  SensorState for the UI state as well and OSC handling.
+ */
 class MotionState: ObservableObject {
   @Published var motionData: SensorDataPacket? = nil
   @Published var anglesVelocity: SCNVector3? = nil

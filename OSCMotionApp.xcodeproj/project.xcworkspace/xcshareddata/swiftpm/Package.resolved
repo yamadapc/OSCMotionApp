@@ -1,6 +1,15 @@
 {
-  "originHash" : "4b2f8c4ba21e796f1369f52d4bb9caa2c7e607b0d3f156c0957123935f298c48",
+  "originHash" : "e3878b8e6d719cbfd67032be2a424d272c0757a3180e44d991ec4973bda07dde",
   "pins" : [
+    {
+      "identity" : "cocoaasyncsocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/robbiehanson/CocoaAsyncSocket",
+      "state" : {
+        "revision" : "dbdc00669c1ced63b27c3c5f052ee4d28f10150c",
+        "version" : "7.6.5"
+      }
+    },
     {
       "identity" : "midikit",
       "kind" : "remoteSourceControl",
@@ -8,6 +17,24 @@
       "state" : {
         "revision" : "b4947edd4c96760dbf1e9c7a686a69b5a30d44bf",
         "version" : "0.9.5"
+      }
+    },
+    {
+      "identity" : "osckit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/OSCKit",
+      "state" : {
+        "revision" : "77bdf99fd1e988e33c07242feef1efdd512700e9",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "swiftascii",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/SwiftASCII",
+      "state" : {
+        "revision" : "81efd5731286be759e91096043be10384034ee57",
+        "version" : "1.1.3"
       }
     },
     {
