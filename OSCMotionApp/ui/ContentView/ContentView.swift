@@ -16,7 +16,10 @@ struct ContentView: View {
   var bleConnection = BluetoothService()
   @ObservedObject var gameState = GameState()
   @State var isErrorShown: Bool = false
-  var configuration = ConfigurationState.loadFromFile(url: URL(string: "file:///Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/config.json")!)
+  var configuration = ConfigurationState.loadFromFile(
+    url: URL(
+      string: "file:///Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/config.json")!
+  )
 
   var body: some View {
     HStack {

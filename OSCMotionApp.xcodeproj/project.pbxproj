@@ -48,6 +48,10 @@
 		CB67C65E2BBCB08A00643884 /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6372BBCB08A00643884 /* MIDIKit */; };
 		CB67C6602BBCB08A00643884 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738C9C692572D24C0005A2A2 /* Preview Assets.xcassets */; };
 		CB67C6612BBCB08A00643884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738C9C662572D24C0005A2A2 /* Assets.xcassets */; };
+		CB67C6692BBCB1A700643884 /* SwiftPrettyPrint in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6682BBCB1A700643884 /* SwiftPrettyPrint */; };
+		CB67C66B2BBCB43500643884 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C66A2BBCB43500643884 /* Colors.swift */; };
+		CB67C66C2BBCB43500643884 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C66A2BBCB43500643884 /* Colors.swift */; };
+		CB67C66E2BBCB4C200643884 /* SwiftPrettyPrint in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C66D2BBCB4C200643884 /* SwiftPrettyPrint */; };
 		CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */; };
 		CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6E2BA9C9FC00297FAB /* MIDIKitControlSurfaces */; };
 		CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F702BA9C9FC00297FAB /* MIDIKitCore */; };
@@ -101,6 +105,7 @@
 		CB67C6342BBCAD8500643884 /* ConfigurationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationState.swift; sourceTree = "<group>"; };
 		CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCMotionAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67C6662BBCB08A00643884 /* OSCMotionApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSCMotionApp copy-Info.plist"; path = "/Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/OSCMotionApp copy-Info.plist"; sourceTree = "<absolute>"; };
+		CB67C66A2BBCB43500643884 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CBDBB67D2BB762E400321A56 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataPacket.swift; sourceTree = "<group>"; };
 		CBDBB6812BB764E500321A56 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB67C66E2BBCB4C200643884 /* SwiftPrettyPrint in Frameworks */,
 				CBCB3F752BA9C9FC00297FAB /* MIDIKitSMF in Frameworks */,
 				CBCB3F732BA9C9FC00297FAB /* MIDIKitIO in Frameworks */,
 				CBCB3F792BA9C9FC00297FAB /* MIDIKitUI in Frameworks */,
@@ -148,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB67C6692BBCB1A700643884 /* SwiftPrettyPrint in Frameworks */,
 				CB67C6562BBCB08A00643884 /* MIDIKitSMF in Frameworks */,
 				CB67C6572BBCB08A00643884 /* MIDIKitIO in Frameworks */,
 				CB67C6582BBCB08A00643884 /* MIDIKitUI in Frameworks */,
@@ -268,6 +275,7 @@
 				CBDBB6892BB7651800321A56 /* SCNVector3+operations.swift */,
 				CBDBB68F2BB765EF00321A56 /* midiManager.swift */,
 				CBDBB6872BB7650400321A56 /* CircularBuffer.swift */,
+				CB67C66A2BBCB43500643884 /* Colors.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				CBCB3F782BA9C9FC00297FAB /* MIDIKitUI */,
 				CB67C6282BBCA64300643884 /* OSCKit */,
 				CB67C62A2BBCA64300643884 /* OSCKitCore */,
+				CB67C66D2BBCB4C200643884 /* SwiftPrettyPrint */,
 			);
 			productName = WT901BLECL_Demo;
 			productReference = 738C9C5F2572D24B0005A2A2 /* OSCMotionApp.app */;
@@ -381,6 +390,7 @@
 				CB67C63E2BBCB08A00643884 /* MIDIKitUI */,
 				CB67C63F2BBCB08A00643884 /* OSCKit */,
 				CB67C6412BBCB08A00643884 /* OSCKitCore */,
+				CB67C6682BBCB1A700643884 /* SwiftPrettyPrint */,
 			);
 			productName = WT901BLECL_Demo;
 			productReference = CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */;
@@ -420,6 +430,7 @@
 			packageReferences = (
 				CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */,
 				CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */,
+				CB67C6672BBCB1A700643884 /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */,
 			);
 			productRefGroup = 738C9C602572D24B0005A2A2 /* Products */;
 			projectDirPath = "";
@@ -485,6 +496,7 @@
 				CBDBB68C2BB7653A00321A56 /* MotionState.swift in Sources */,
 				CBDBB6802BB762FE00321A56 /* SensorDataPacket.swift in Sources */,
 				CBDBB6902BB765EF00321A56 /* midiManager.swift in Sources */,
+				CB67C66B2BBCB43500643884 /* Colors.swift in Sources */,
 				CB67C62F2BBCA73000643884 /* MusicMessageService.swift in Sources */,
 				738C9C632572D24B0005A2A2 /* OSCMotionApp.swift in Sources */,
 				738C9C6F2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
@@ -524,6 +536,7 @@
 				CB67C64C2BBCB08A00643884 /* MotionState.swift in Sources */,
 				CB67C64D2BBCB08A00643884 /* SensorDataPacket.swift in Sources */,
 				CB67C64E2BBCB08A00643884 /* midiManager.swift in Sources */,
+				CB67C66C2BBCB43500643884 /* Colors.swift in Sources */,
 				CB67C64F2BBCB08A00643884 /* MusicMessageService.swift in Sources */,
 				CB67C6502BBCB08A00643884 /* OSCMotionApp.swift in Sources */,
 				CB67C6512BBCB08A00643884 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
@@ -920,6 +933,14 @@
 				minimumVersion = 0.5.0;
 			};
 		};
+		CB67C6672BBCB1A700643884 /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/YusukeHosonuma/SwiftPrettyPrint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 		CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/orchetect/MIDIKit";
@@ -985,6 +1006,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB67C6402BBCB08A00643884 /* XCRemoteSwiftPackageReference "OSCKit" */;
 			productName = OSCKitCore;
+		};
+		CB67C6682BBCB1A700643884 /* SwiftPrettyPrint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6672BBCB1A700643884 /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */;
+			productName = SwiftPrettyPrint;
+		};
+		CB67C66D2BBCB4C200643884 /* SwiftPrettyPrint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6672BBCB1A700643884 /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */;
+			productName = SwiftPrettyPrint;
 		};
 		CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */ = {
 			isa = XCSwiftPackageProductDependency;

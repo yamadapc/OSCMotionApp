@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftPrettyPrint
 import os
 
-fileprivate let logger = Logger(
+private let logger = Logger(
   subsystem: Bundle.main.bundleIdentifier!,
   category: String(describing: ConfigurationState.self)
 )
@@ -17,7 +18,10 @@ class ConfigurationState: ObservableObject, Decodable {
   var oscServerConfiguration: OSCServerConfiguration
   var sensorsMessageConfiguration: [MessageConfiguration]
 
-  init(oscServerConfiguration: OSCServerConfiguration, sensorsMessageConfiguration: [MessageConfiguration]) {
+  init(
+    oscServerConfiguration: OSCServerConfiguration,
+    sensorsMessageConfiguration: [MessageConfiguration]
+  ) {
     self.oscServerConfiguration = oscServerConfiguration
     self.sensorsMessageConfiguration = sensorsMessageConfiguration
   }
@@ -28,6 +32,9 @@ class ConfigurationState: ObservableObject, Decodable {
       let decoder = JSONDecoder()
       let data = try Data(contentsOf: url)
       let state = try decoder.decode(ConfigurationState.self, from: data)
+
+      logger.info("Configuration loaded successfully")
+      SwiftPrettyPrint.Pretty.print(state)
 
       return state
     } catch let error {

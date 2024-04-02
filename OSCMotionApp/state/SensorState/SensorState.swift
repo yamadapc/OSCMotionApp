@@ -6,12 +6,18 @@
 //
 
 import Foundation
-import SwiftUI
 import MIDIKit
 import OSCKit
 import SceneKit
+import SwiftUI
 
-private func eulerToQuaternion(pitch: CGFloat, roll: CGFloat, yaw: CGFloat) -> SCNQuaternion {
+#if os(macOS)
+  typealias SCNFloat = CGFloat
+#else
+  typealias SCNFloat = Float
+#endif
+
+private func eulerToQuaternion(pitch: SCNFloat, roll: SCNFloat, yaw: SCNFloat) -> SCNQuaternion {
   // Create a temporary SCNNode
   let tempNode = SCNNode()
 
@@ -48,7 +54,7 @@ class SensorState: ObservableObject, Identifiable {
     self.id = id
     self.midiChannel = midiChannel
     self.node = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.01))
-    self.node.geometry?.firstMaterial?.diffuse.contents = Color.purple
+    self.node.geometry?.firstMaterial?.diffuse.contents = AppColors.purple
     self.node.position = SCNVector3(0, 0.7, 0)
     self.scene.rootNode.addChildNode(node)
   }
