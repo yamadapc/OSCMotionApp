@@ -9,7 +9,7 @@ import Foundation
 import MIDIKit
 import SceneKit
 
-fileprivate func eulerToQuaternion(pitch: Float, roll: Float, yaw: Float) -> SCNQuaternion {
+private func eulerToQuaternion(pitch: Float, roll: Float, yaw: Float) -> SCNQuaternion {
   // Create a temporary SCNNode
   let tempNode = SCNNode()
 
@@ -20,7 +20,7 @@ fileprivate func eulerToQuaternion(pitch: Float, roll: Float, yaw: Float) -> SCN
   return tempNode.orientation
 }
 
-fileprivate func sendMIDI(cc: MIDIEvent.CC.Controller, midiChannel: Int, value: Double) {
+private func sendMIDI(cc: MIDIEvent.CC.Controller, midiChannel: Int, value: Double) {
   for (_, output) in midiManager.managedOutputs {
     let valueNum: Double = abs(127.0 * min(1.0, max(value, 0.0)))
     let value: MIDIEvent.CC.Value = MIDIEvent.CC.Value.midi1(UInt7(valueNum))
