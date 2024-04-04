@@ -28,31 +28,23 @@ private func eulerToQuaternion(pitch: SCNFloat, roll: SCNFloat, yaw: SCNFloat) -
   return tempNode.orientation
 }
 
-private func sendMIDI(cc: MIDIEvent.CC.Controller, midiChannel: Int, value: Double) {
-  for (_, output) in midiManager.managedOutputs {
-    let valueNum: Double = abs(127.0 * min(1.0, max(value, 0.0)))
-    let value: MIDIEvent.CC.Value = MIDIEvent.CC.Value.midi1(UInt7(valueNum))
-    let event: MIDIEvent = .cc(
-      MIDIEvent.CC(
-        controller: cc,
-        value: value,
-        channel: UInt4(midiChannel)
-      )
-    )
-    try! output.send(event: event)
-  }
-}
-
 class SensorState: ObservableObject, Identifiable {
   var id: String
   var node: SCNNode
   var motion: MotionState = MotionState()
   var scene = GameScene()
-  var midiChannel: Int
+  var sensorConfiguration: SensorConfiguration
+  var messageTransportService: MessageTransportService
 
-  init(id: String, midiChannel: Int) {
+  init(
+    id: String,
+    sensorConfiguration: SensorConfiguration,
+    messageTransportService: MessageTransportService
+  ) {
     self.id = id
-    self.midiChannel = midiChannel
+    self.sensorConfiguration = sensorConfiguration
+
+    self.messageTransportService = messageTransportService
     self.node = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.01))
     self.node.geometry?.firstMaterial?.diffuse.contents = AppColor.purple
     self.node.position = SCNVector3(0, 0.7, 0)
@@ -65,24 +57,19 @@ class SensorState: ObservableObject, Identifiable {
 
   func onReceivePacket(packet: SensorDataPacket) {
     motion.setMotionData(packet)
-    guard let state = motion.anglesState
-    else { return }
-    node.orientation = eulerToQuaternion(pitch: state.x, roll: state.z, yaw: state.y)
 
-    sendMIDI(
-      cc: .generalPurpose1, midiChannel: midiChannel,
-      value: (Double.pi + Double(state.x)) / (Double.pi * 2))
-    sendMIDI(
-      cc: .generalPurpose2, midiChannel: midiChannel,
-      value: (Double.pi + Double(state.y)) / (Double.pi * 2))
-    sendMIDI(
-      cc: .generalPurpose3, midiChannel: midiChannel,
-      value: (Double.pi + Double(state.z)) / (Double.pi * 2))
+    let sensorConfiguration = self.sensorConfiguration
+    self.messageTransportService.sendMessage(
+      sensor: sensorConfiguration,
+      packet: packet
+    )
 
-    // guard let acceleration = motion.anglesAcceleration
-    //   else { return }
-    // self.velocity = velocity.plus(acceleration.times(SCNVector3(2, 2, 2))).times(
-    //   SCNVector3(0.99, 0.99, 0.99))
-    // sphere.eulerAngles = sphere.eulerAngles.plus(velocity)
+    guard let state = motion.anglesState else { return }
+    node.orientation = eulerToQuaternion(
+      pitch: state.x,
+      roll: state.z,
+      yaw: state.y
+    )
   }
+
 }

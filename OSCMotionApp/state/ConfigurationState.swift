@@ -14,17 +14,39 @@ private let logger = Logger(
   category: String(describing: ConfigurationState.self)
 )
 
-class ConfigurationState: ObservableObject, Decodable {
-  var oscServerConfiguration: OSCServerConfiguration
-  var sensorsMessageConfiguration: [MessageConfiguration]
+struct MIDIMessageConfiguration: Codable {
+  var midiCC: Int
+  var midiRangeStart: Int?
+  var midiRangeEnd: Int?
 
-  init(
-    oscServerConfiguration: OSCServerConfiguration,
-    sensorsMessageConfiguration: [MessageConfiguration]
-  ) {
-    self.oscServerConfiguration = oscServerConfiguration
-    self.sensorsMessageConfiguration = sensorsMessageConfiguration
+  init(midiCC: Int, midiRangeStart: Int? = nil, midiRangeEnd: Int? = nil) {
+    self.midiCC = midiCC
+    self.midiRangeStart = midiRangeStart
+    self.midiRangeEnd = midiRangeEnd
   }
+}
+
+struct OSCMessageConfiguration {
+
+}
+
+struct MessageConfiguration {
+  let midi: MIDIMessageConfiguration
+  let osc: OSCMessageConfiguration
+}
+
+struct SensorMIDIConfiguration: Codable {
+  let midiChannel: Int
+}
+
+struct SensorConfiguration: Decodable {
+  let id: String
+  let midiConfiguration: SensorMIDIConfiguration
+}
+
+struct ConfigurationState: Decodable {
+  let oscServerConfiguration: OSCServerConfiguration
+  let sensors: [SensorConfiguration]
 
   static func loadFromFile(url: URL) -> ConfigurationState {
     do {
@@ -40,8 +62,11 @@ class ConfigurationState: ObservableObject, Decodable {
     } catch let error {
       logger.error("Failed reading configuration \(error)")
       return ConfigurationState(
-        oscServerConfiguration: OSCServerConfiguration(serverURL: "localhost"),
-        sensorsMessageConfiguration: []
+        oscServerConfiguration: OSCServerConfiguration(
+          host: "localhost",
+          port: 8000
+        ),
+        sensors: []
       )
     }
   }

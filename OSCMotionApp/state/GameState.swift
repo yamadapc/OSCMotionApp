@@ -9,9 +9,25 @@ import Foundation
 
 class GameState: ObservableObject {
   var sensors: [String: SensorState] = [:]
+  var configuration: ConfigurationState
+  var messageTransportService: MessageTransportService
+
+  init(
+    configuration: ConfigurationState,
+    messageTransportService: MessageTransportService
+  ) {
+    self.configuration = configuration
+    self.messageTransportService = messageTransportService
+  }
 
   func onConnect(peripheral: String) {
-    let sensor = SensorState(id: peripheral, midiChannel: self.sensors.count)
+    let nextIndex = sensors.count % configuration.sensors.count
+    let nextConfiguration = configuration.sensors[nextIndex]
+    let sensor = SensorState(
+      id: peripheral,
+      sensorConfiguration: nextConfiguration,
+      messageTransportService: messageTransportService
+    )
     self.sensors[peripheral] = sensor
     self.objectWillChange.send()
   }

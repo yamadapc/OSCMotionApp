@@ -21,10 +21,10 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
   private var centralManager: CBCentralManager! = nil
   private var peripherals: [String: CBPeripheral] = [:]
   private var parsers: [String: Parser] = [:]
-  private var state: GameState?
+  private var gameState: GameState?
 
-  func startCentralManager(state: GameState) {
-    self.state = state
+  func startCentralManager(gameState: GameState) {
+    self.gameState = gameState
     self.centralManager = CBCentralManager(delegate: self, queue: nil)
   }
 
@@ -64,7 +64,7 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
 
   // connect callback
   public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-    self.state?.onConnect(peripheral: peripheral.identifier.uuidString)
+    self.gameState?.onConnect(peripheral: peripheral.identifier.uuidString)
     logger.info("Connected to peripheral=\(peripheral.identifier)")
     peripheral.discoverServices(nil)
   }
@@ -80,7 +80,7 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
     _ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?
   ) {
     logger.info("didDisconnectPeripheral \(error?.localizedDescription ?? "", privacy: .public)")
-    self.state?.onDisconnect(peripheral: peripheral.identifier.uuidString)
+    self.gameState?.onDisconnect(peripheral: peripheral.identifier.uuidString)
   }
 
   // service discovery callback
@@ -122,7 +122,7 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
     let packets = parser.handleData(data)
 
     for packet in packets {
-      self.state?.onReceivePacket(peripheral: peripheral.identifier.uuidString, packet: packet)
+      self.gameState?.onReceivePacket(peripheral: peripheral.identifier.uuidString, packet: packet)
     }
   }
 }

@@ -15,8 +15,6 @@
 		738C9C962572D3170005A2A2 /* BLEConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C952572D3170005A2A2 /* BLEConnection.swift */; };
 		CB67C6292BBCA64300643884 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6282BBCA64300643884 /* OSCKit */; };
 		CB67C62B2BBCA64300643884 /* OSCKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C62A2BBCA64300643884 /* OSCKitCore */; };
-		CB67C62D2BBCA67200643884 /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */; };
-		CB67C62F2BBCA73000643884 /* MusicMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62E2BBCA73000643884 /* MusicMessageService.swift */; };
 		CB67C6312BBCA7B800643884 /* OSCServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */; };
 		CB67C6352BBCAD8500643884 /* ConfigurationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6342BBCAD8500643884 /* ConfigurationState.swift */; };
 		CB67C6432BBCB08A00643884 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6812BB764E500321A56 /* GameState.swift */; };
@@ -31,12 +29,10 @@
 		CB67C64C2BBCB08A00643884 /* MotionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB68B2BB7653A00321A56 /* MotionState.swift */; };
 		CB67C64D2BBCB08A00643884 /* SensorDataPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */; };
 		CB67C64E2BBCB08A00643884 /* midiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB68F2BB765EF00321A56 /* midiManager.swift */; };
-		CB67C64F2BBCB08A00643884 /* MusicMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62E2BBCA73000643884 /* MusicMessageService.swift */; };
 		CB67C6502BBCB08A00643884 /* OSCMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C622572D24B0005A2A2 /* OSCMotionApp.swift */; };
 		CB67C6512BBCB08A00643884 /* WT901BLECL_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 738C9C6D2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld */; };
 		CB67C6522BBCB08A00643884 /* OSCServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */; };
 		CB67C6532BBCB08A00643884 /* SensorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBB6832BB764EA00321A56 /* SensorState.swift */; };
-		CB67C6542BBCB08A00643884 /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */; };
 		CB67C6562BBCB08A00643884 /* MIDIKitSMF in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63C2BBCB08A00643884 /* MIDIKitSMF */; };
 		CB67C6572BBCB08A00643884 /* MIDIKitIO in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63B2BBCB08A00643884 /* MIDIKitIO */; };
 		CB67C6582BBCB08A00643884 /* MIDIKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C63E2BBCB08A00643884 /* MIDIKitUI */; };
@@ -52,6 +48,10 @@
 		CB67C66B2BBCB43500643884 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C66A2BBCB43500643884 /* Colors.swift */; };
 		CB67C66C2BBCB43500643884 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C66A2BBCB43500643884 /* Colors.swift */; };
 		CB67C66E2BBCB4C200643884 /* SwiftPrettyPrint in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C66D2BBCB4C200643884 /* SwiftPrettyPrint */; };
+		CB67C6702BBCB68800643884 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = CB67C66F2BBCB68800643884 /* config.json */; };
+		CB67C6712BBCB68800643884 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = CB67C66F2BBCB68800643884 /* config.json */; };
+		CB67C6762BBF3D2C00643884 /* MessageTransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */; };
+		CB67C6772BBF3D2C00643884 /* MessageTransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */; };
 		CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */; };
 		CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6E2BA9C9FC00297FAB /* MIDIKitControlSurfaces */; };
 		CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F702BA9C9FC00297FAB /* MIDIKitCore */; };
@@ -99,13 +99,13 @@
 		738C9C752572D24C0005A2A2 /* OSCMotionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCMotionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		738C9C802572D24C0005A2A2 /* OSCMotionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCMotionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		738C9C952572D3170005A2A2 /* BLEConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnection.swift; sourceTree = "<group>"; };
-		CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConfiguration.swift; sourceTree = "<group>"; };
-		CB67C62E2BBCA73000643884 /* MusicMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMessageService.swift; sourceTree = "<group>"; };
 		CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCServerConfiguration.swift; sourceTree = "<group>"; };
 		CB67C6342BBCAD8500643884 /* ConfigurationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationState.swift; sourceTree = "<group>"; };
 		CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCMotionAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67C6662BBCB08A00643884 /* OSCMotionApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSCMotionApp copy-Info.plist"; path = "/Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/OSCMotionApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		CB67C66A2BBCB43500643884 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CB67C66F2BBCB68800643884 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
+		CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTransportService.swift; sourceTree = "<group>"; };
 		CBDBB67D2BB762E400321A56 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataPacket.swift; sourceTree = "<group>"; };
 		CBDBB6812BB764E500321A56 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
@@ -194,6 +194,7 @@
 		738C9C612572D24B0005A2A2 /* OSCMotionApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB67C66F2BBCB68800643884 /* config.json */,
 				738C9C622572D24B0005A2A2 /* OSCMotionApp.swift */,
 				CBDBB6912BB7660600321A56 /* ui */,
 				CBDBB6942BB7665700321A56 /* state */,
@@ -220,7 +221,6 @@
 			children = (
 				CBDBB68B2BB7653A00321A56 /* MotionState.swift */,
 				CBDBB6832BB764EA00321A56 /* SensorState.swift */,
-				CB67C62C2BBCA67200643884 /* MessageConfiguration.swift */,
 			);
 			path = SensorState;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDBB6972BB7669400321A56 /* bluetooth */,
-				CB67C62E2BBCA73000643884 /* MusicMessageService.swift */,
+				CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -451,6 +451,7 @@
 			files = (
 				738C9C6A2572D24C0005A2A2 /* Preview Assets.xcassets in Resources */,
 				738C9C672572D24C0005A2A2 /* Assets.xcassets in Resources */,
+				CB67C6702BBCB68800643884 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +475,7 @@
 			files = (
 				CB67C6602BBCB08A00643884 /* Preview Assets.xcassets in Resources */,
 				CB67C6612BBCB08A00643884 /* Assets.xcassets in Resources */,
+				CB67C6712BBCB68800643884 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,12 +499,11 @@
 				CBDBB6802BB762FE00321A56 /* SensorDataPacket.swift in Sources */,
 				CBDBB6902BB765EF00321A56 /* midiManager.swift in Sources */,
 				CB67C66B2BBCB43500643884 /* Colors.swift in Sources */,
-				CB67C62F2BBCA73000643884 /* MusicMessageService.swift in Sources */,
 				738C9C632572D24B0005A2A2 /* OSCMotionApp.swift in Sources */,
+				CB67C6762BBF3D2C00643884 /* MessageTransportService.swift in Sources */,
 				738C9C6F2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
 				CB67C6312BBCA7B800643884 /* OSCServerConfiguration.swift in Sources */,
 				CBDBB6842BB764EA00321A56 /* SensorState.swift in Sources */,
-				CB67C62D2BBCA67200643884 /* MessageConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,12 +538,11 @@
 				CB67C64D2BBCB08A00643884 /* SensorDataPacket.swift in Sources */,
 				CB67C64E2BBCB08A00643884 /* midiManager.swift in Sources */,
 				CB67C66C2BBCB43500643884 /* Colors.swift in Sources */,
-				CB67C64F2BBCB08A00643884 /* MusicMessageService.swift in Sources */,
 				CB67C6502BBCB08A00643884 /* OSCMotionApp.swift in Sources */,
+				CB67C6772BBF3D2C00643884 /* MessageTransportService.swift in Sources */,
 				CB67C6512BBCB08A00643884 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
 				CB67C6522BBCB08A00643884 /* OSCServerConfiguration.swift in Sources */,
 				CB67C6532BBCB08A00643884 /* SensorState.swift in Sources */,
-				CB67C6542BBCB08A00643884 /* MessageConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

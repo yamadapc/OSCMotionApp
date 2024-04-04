@@ -7,10 +7,7 @@
 
 import Foundation
 
-class OSCServerConfiguration: ObservableObject, Codable {
-  var serverURL: String
-
-  init(serverURL: String) {
-    self.serverURL = serverURL
-  }
+struct OSCServerConfiguration: Codable {
+  let host: String
+  let port: Int
 }

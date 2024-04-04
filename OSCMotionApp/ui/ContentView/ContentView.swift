@@ -13,15 +13,25 @@ import SceneKit
 import SwiftUI
 
 struct ContentView: View {
-  var bleConnection = BluetoothService()
-
-  @ObservedObject var gameState = GameState()
+  @State var bleConnection = BluetoothService()
+  @State var messageTransportService: MessageTransportService
   @State var isErrorShown: Bool = false
-
   var configuration = ConfigurationState.loadFromFile(
     url: URL(
       string: "file:///Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/config.json")!
   )
+  @ObservedObject var gameState: GameState
+
+  init() {
+    let messageTransportService = MessageTransportService(
+      configuration: configuration.oscServerConfiguration
+    )
+    gameState = GameState(
+      configuration: configuration,
+      messageTransportService: messageTransportService
+    )
+    self.messageTransportService = messageTransportService
+  }
 
   var body: some View {
     HStack {
@@ -36,8 +46,7 @@ struct ContentView: View {
     .onAppear {
       self.connectBLEDevice()
       do {
-        try midiManager.start()
-        try midiManager.addOutput(name: "OSCMotionoutput", tag: "OSCMotion", uniqueID: .adHoc)
+        try messageTransportService.start()
       } catch let error {
         let _ = self.alert(
           "Error", isPresented: $isErrorShown, actions: {},
@@ -50,7 +59,7 @@ struct ContentView: View {
   }
 
   private func connectBLEDevice() {
-    bleConnection.startCentralManager(state: gameState)
+    bleConnection.startCentralManager(gameState: gameState)
   }
 }
 
