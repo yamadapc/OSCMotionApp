@@ -21,6 +21,7 @@ struct ContentView: View {
       string: "file:///Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/config.json")!
   )
   @ObservedObject var gameState: GameState
+  @State var enableVisualisations: Bool = true
 
   init() {
     let messageTransportService = MessageTransportService(
@@ -34,13 +35,21 @@ struct ContentView: View {
   }
 
   var body: some View {
-    HStack {
-      if gameState.sensors.isEmpty {
-        Text("Searching for sensors...")
-      }
+    VStack {
+      Toggle(isOn: $enableVisualisations, label: { Text("Enable visuals") })
+      HStack {
+        if gameState.sensors.isEmpty {
+          Text("Searching for sensors...")
+        }
 
-      ForEach(Array(gameState.sensors.values)) { sensor in
-        VisualizerView(scene: sensor.scene)
+        ForEach(Array(gameState.sensors.values)) { sensor in
+          VStack {
+            if enableVisualisations {
+              VisualizerView(scene: sensor.scene)
+            }
+            Text(sensor.getAlias() ?? "Unknown \(sensor.id)")
+          }
+        }
       }
     }
     .onAppear {

@@ -79,6 +79,7 @@ class MessageTransportService {
   }
 
   func sendMessage(
+    id: String,
     sensor: SensorConfiguration,
     packet: SensorDataPacket
   ) {
@@ -97,7 +98,7 @@ class MessageTransportService {
         )
 
         let message = OSCMessage(
-          "/sensor/\(sensor.id)/\(message.id)",
+          "/sensor/\(id)/\(message.id)",
           values: [
             Int(message.value * 1000)
           ]
@@ -130,11 +131,37 @@ class MessageTransportService {
           value: (Double.pi + Double(z)) / (Double.pi * 2)
         ),
       ]
-    default:
-      break
+    case .acceleration(let x, let y, let z, temperature: _):
+      return [
+        Message(
+          id: "acc/x",
+          value: x * 2
+        ),
+        Message(
+          id: "acc/y",
+          value: y * 2
+        ),
+        Message(
+          id: "acc/z",
+          value: z * 2
+        ),
+      ]
+    case .angularVelocity(let x, let y, let z, temperature: _):
+      return [
+        Message(
+          id: "angvel/x",
+          value: x / 1000
+        ),
+        Message(
+          id: "angvel/y",
+          value: y / 1000
+        ),
+        Message(
+          id: "angvel/z",
+          value: z / 1000
+        ),
+      ]
     }
-
-    return []
   }
 
   func start() throws {

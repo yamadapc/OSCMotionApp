@@ -28,6 +28,14 @@ private func eulerToQuaternion(pitch: SCNFloat, roll: SCNFloat, yaw: SCNFloat) -
   return tempNode.orientation
 }
 
+let sensorAliases = [
+  "914AC898-DBDA-2716-7A5F-260C0B8145A8": "L",
+  "F9356C49-0869-7954-B347-ED65689B76AE": "R",
+  "B299617D-FB93-E73D-E313-FA4F6B542424": "W",
+  "73DE5E46-CAED-1EDF-F687-AA11CC60B2C2": "A",
+  "406F4A02-13AE-E9C5-83DF-75F5FD57E023": "T",
+]
+
 class SensorState: ObservableObject, Identifiable {
   var id: String
   var node: SCNNode
@@ -51,6 +59,10 @@ class SensorState: ObservableObject, Identifiable {
     self.scene.rootNode.addChildNode(node)
   }
 
+  func getAlias() -> String? {
+    return sensorAliases[self.id]
+  }
+
   func destroy() {
     self.node.removeFromParentNode()
   }
@@ -60,6 +72,7 @@ class SensorState: ObservableObject, Identifiable {
 
     let sensorConfiguration = self.sensorConfiguration
     self.messageTransportService.sendMessage(
+      id: getAlias() ?? self.id,
       sensor: sensorConfiguration,
       packet: packet
     )

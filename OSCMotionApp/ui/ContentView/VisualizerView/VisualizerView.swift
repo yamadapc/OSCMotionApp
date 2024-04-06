@@ -10,6 +10,7 @@ import SwiftUI
 
 struct VisualizerView: View {
   var scene: GameScene
+
   var body: some View {
     SceneView(scene: scene, pointOfView: scene.cameraNode, options: .allowsCameraControl)
   }

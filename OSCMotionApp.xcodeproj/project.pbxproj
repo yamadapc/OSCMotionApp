@@ -52,6 +52,17 @@
 		CB67C6712BBCB68800643884 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = CB67C66F2BBCB68800643884 /* config.json */; };
 		CB67C6762BBF3D2C00643884 /* MessageTransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */; };
 		CB67C6772BBF3D2C00643884 /* MessageTransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */; };
+		CB67C67A2BC1008300643884 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6792BC1008300643884 /* BitCollections */; };
+		CB67C67C2BC1008300643884 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C67B2BC1008300643884 /* Collections */; };
+		CB67C67E2BC1008300643884 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C67D2BC1008300643884 /* DequeModule */; };
+		CB67C6802BC1008300643884 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C67F2BC1008300643884 /* HashTreeCollections */; };
+		CB67C6822BC1008300643884 /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6812BC1008300643884 /* HeapModule */; };
+		CB67C6842BC1008300643884 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6832BC1008300643884 /* OrderedCollections */; };
+		CB67C6862BC1008300643884 /* _RopeModule in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6852BC1008300643884 /* _RopeModule */; };
+		CB67C6882BC10EFF00643884 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6872BC10EFF00643884 /* BitCollections */; };
+		CB67C68A2BC10EFF00643884 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6892BC10EFF00643884 /* Collections */; };
+		CB67C68C2BC10EFF00643884 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C68B2BC10EFF00643884 /* HashTreeCollections */; };
+		CB67C68E2BC10EFF00643884 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C68D2BC10EFF00643884 /* OrderedCollections */; };
 		CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */; };
 		CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6E2BA9C9FC00297FAB /* MIDIKitControlSurfaces */; };
 		CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F702BA9C9FC00297FAB /* MIDIKitCore */; };
@@ -125,14 +136,18 @@
 			files = (
 				CB67C66E2BBCB4C200643884 /* SwiftPrettyPrint in Frameworks */,
 				CBCB3F752BA9C9FC00297FAB /* MIDIKitSMF in Frameworks */,
+				CB67C68C2BC10EFF00643884 /* HashTreeCollections in Frameworks */,
 				CBCB3F732BA9C9FC00297FAB /* MIDIKitIO in Frameworks */,
 				CBCB3F792BA9C9FC00297FAB /* MIDIKitUI in Frameworks */,
 				CB67C6292BBCA64300643884 /* OSCKit in Frameworks */,
 				CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */,
+				CB67C68A2BC10EFF00643884 /* Collections in Frameworks */,
 				CB67C62B2BBCA64300643884 /* OSCKitCore in Frameworks */,
 				CBCB3F772BA9C9FC00297FAB /* MIDIKitSync in Frameworks */,
 				CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */,
 				CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */,
+				CB67C68E2BC10EFF00643884 /* OrderedCollections in Frameworks */,
+				CB67C6882BC10EFF00643884 /* BitCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,15 +170,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB67C6692BBCB1A700643884 /* SwiftPrettyPrint in Frameworks */,
+				CB67C6822BC1008300643884 /* HeapModule in Frameworks */,
 				CB67C6562BBCB08A00643884 /* MIDIKitSMF in Frameworks */,
 				CB67C6572BBCB08A00643884 /* MIDIKitIO in Frameworks */,
 				CB67C6582BBCB08A00643884 /* MIDIKitUI in Frameworks */,
 				CB67C6592BBCB08A00643884 /* OSCKit in Frameworks */,
+				CB67C6842BC1008300643884 /* OrderedCollections in Frameworks */,
 				CB67C65A2BBCB08A00643884 /* MIDIKitCore in Frameworks */,
+				CB67C67C2BC1008300643884 /* Collections in Frameworks */,
+				CB67C67E2BC1008300643884 /* DequeModule in Frameworks */,
+				CB67C6862BC1008300643884 /* _RopeModule in Frameworks */,
 				CB67C65B2BBCB08A00643884 /* OSCKitCore in Frameworks */,
 				CB67C65C2BBCB08A00643884 /* MIDIKitSync in Frameworks */,
+				CB67C6802BC1008300643884 /* HashTreeCollections in Frameworks */,
 				CB67C65D2BBCB08A00643884 /* MIDIKitControlSurfaces in Frameworks */,
 				CB67C65E2BBCB08A00643884 /* MIDIKit in Frameworks */,
+				CB67C67A2BC1008300643884 /* BitCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +348,10 @@
 				CB67C6282BBCA64300643884 /* OSCKit */,
 				CB67C62A2BBCA64300643884 /* OSCKitCore */,
 				CB67C66D2BBCB4C200643884 /* SwiftPrettyPrint */,
+				CB67C6872BC10EFF00643884 /* BitCollections */,
+				CB67C6892BC10EFF00643884 /* Collections */,
+				CB67C68B2BC10EFF00643884 /* HashTreeCollections */,
+				CB67C68D2BC10EFF00643884 /* OrderedCollections */,
 			);
 			productName = WT901BLECL_Demo;
 			productReference = 738C9C5F2572D24B0005A2A2 /* OSCMotionApp.app */;
@@ -391,6 +417,13 @@
 				CB67C63F2BBCB08A00643884 /* OSCKit */,
 				CB67C6412BBCB08A00643884 /* OSCKitCore */,
 				CB67C6682BBCB1A700643884 /* SwiftPrettyPrint */,
+				CB67C6792BC1008300643884 /* BitCollections */,
+				CB67C67B2BC1008300643884 /* Collections */,
+				CB67C67D2BC1008300643884 /* DequeModule */,
+				CB67C67F2BC1008300643884 /* HashTreeCollections */,
+				CB67C6812BC1008300643884 /* HeapModule */,
+				CB67C6832BC1008300643884 /* OrderedCollections */,
+				CB67C6852BC1008300643884 /* _RopeModule */,
 			);
 			productName = WT901BLECL_Demo;
 			productReference = CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */;
@@ -431,6 +464,7 @@
 				CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */,
 				CB67C6262BBCA63500643884 /* XCRemoteSwiftPackageReference "OSCKit" */,
 				CB67C6672BBCB1A700643884 /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */,
+				CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 738C9C602572D24B0005A2A2 /* Products */;
 			projectDirPath = "";
@@ -941,6 +975,14 @@
 				minimumVersion = 1.4.0;
 			};
 		};
+		CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		CBCB3F6B2BA9C9FC00297FAB /* XCRemoteSwiftPackageReference "MIDIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/orchetect/MIDIKit";
@@ -1016,6 +1058,61 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB67C6672BBCB1A700643884 /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */;
 			productName = SwiftPrettyPrint;
+		};
+		CB67C6792BC1008300643884 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		CB67C67B2BC1008300643884 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		CB67C67D2BC1008300643884 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		CB67C67F2BC1008300643884 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		CB67C6812BC1008300643884 /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+		CB67C6832BC1008300643884 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		CB67C6852BC1008300643884 /* _RopeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = _RopeModule;
+		};
+		CB67C6872BC10EFF00643884 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		CB67C6892BC10EFF00643884 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		CB67C68B2BC10EFF00643884 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		CB67C68D2BC10EFF00643884 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67C6782BC1008300643884 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
 		};
 		CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */ = {
 			isa = XCSwiftPackageProductDependency;

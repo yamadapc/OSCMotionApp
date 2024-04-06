@@ -87,7 +87,7 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
   public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
     if let services = peripheral.services {
       for service in services {
-        logger.info("Discovered service \(service)")
+        logger.debug("Discovered service \(service)")
         peripheral.discoverCharacteristics(nil, for: service)
       }
     }
@@ -99,7 +99,7 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
   ) {
     if let characteristics = service.characteristics {
       for characteristic in characteristics {
-        logger.info(
+        logger.debug(
           "Discovered characteristic service=\(service.uuid) characteristic=\(characteristic.uuid)")
         peripheral.setNotifyValue(true, for: characteristic)
       }
@@ -121,8 +121,11 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
     guard let parser = self.parsers[peripheral.identifier.uuidString] else { return }
     let packets = parser.handleData(data)
 
-    for packet in packets {
-      self.gameState?.onReceivePacket(peripheral: peripheral.identifier.uuidString, packet: packet)
+    DispatchQueue.global(qos: .background).async {
+      for packet in packets {
+        self.gameState?.onReceivePacket(
+          peripheral: peripheral.identifier.uuidString, packet: packet)
+      }
     }
   }
 }
