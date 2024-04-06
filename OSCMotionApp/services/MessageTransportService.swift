@@ -72,6 +72,7 @@ struct Message {
 class MessageTransportService {
   let oscClient = OSCClient()
   let configuration: OSCServerConfiguration
+  var timer: Timer?
 
   init(configuration: OSCServerConfiguration) {
     self.configuration = configuration
@@ -137,11 +138,30 @@ class MessageTransportService {
   }
 
   func start() throws {
+    logger.info("Starting MIDI system")
     try midiManager.start()
     try midiManager.addOutput(
       name: "OSCMotionoutput",
       tag: "OSCMotion",
       uniqueID: .adHoc
     )
+    self.startTimer()
+  }
+
+  func startTimer() {
+    logger.info("Starting OSC ping interval \(self.configuration.host):\(self.configuration.port)")
+    self.timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
+      let pingMessage = OSCMessage(
+        "/oscmotion/ping",
+        values: [
+          Int(Date().timeIntervalSince1970)
+        ]
+      )
+      try? self.oscClient.send(
+        pingMessage,
+        to: self.configuration.host,
+        port: UInt16(self.configuration.port)
+      )
+    }
   }
 }

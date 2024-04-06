@@ -1,37 +1,37 @@
 {
   "oscServerConfiguration": {
     "host": "localhost",
-    "port": 7000
+    "port": 7001
   },
   "sensors": [
     {
       "id": "1",
       "midiConfiguration": {
-        "midiChannel": 0
+        "midiChannel": 2
       }
     },
     {
       "id": "2",
       "midiConfiguration": {
-        "midiChannel": 1
+        "midiChannel": 3
       }
     },
     {
       "id": "3",
       "midiConfiguration": {
-        "midiChannel": 2
+        "midiChannel": 4
       }
     },
     {
       "id": "4",
       "midiConfiguration": {
-        "midiChannel": 3
+        "midiChannel": 5
       }
     },
     {
       "id": "5",
       "midiConfiguration": {
-        "midiChannel": 4
+        "midiChannel": 6
       }
     }
   ]
