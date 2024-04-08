@@ -21,12 +21,26 @@ class MotionState: ObservableObject {
   @Published var anglesVelocity: SCNVector3? = nil
   @Published var anglesAcceleration: SCNVector3? = nil
   @Published var anglesState: SCNVector3? = nil
-  @Published var previousData = CircularBuffer<SensorDataPacket>(capacity: 100)
+  // @Published var previousData = CircularBuffer<SensorDataPacket>(capacity: 100)
 
-  init() {}
+  var flush: (() -> Void)?
+  var timer: Timer?
+
+  init() {
+  }
+
+  func start() {
+    self.timer = Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { _ in
+      self.flush?()
+    }
+  }
 
   func setMotionData(_ motionData: SensorDataPacket?) {
     guard let motionData = motionData else { return }
+
+    if self.timer == nil {
+      self.start()
+    }
 
     switch motionData {
     case .angle(x: let roll, y: let pitch, z: let yaw, temperature: _):
@@ -41,12 +55,11 @@ class MotionState: ObservableObject {
         ? currVelocity.minus(self.anglesVelocity!)
         : SCNVector3(0, 0, 0)
 
-      DispatchQueue.main.async {
+      self.flush = {
         self.motionData = motionData
         self.anglesVelocity = currVelocity
         self.anglesState = SCNVector3(pitch, yaw, roll)
         self.anglesAcceleration = currAcceleration
-        self.previousData.append(motionData)
       }
     default:
       break

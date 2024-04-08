@@ -121,11 +121,11 @@ class BluetoothService: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate
     guard let parser = self.parsers[peripheral.identifier.uuidString] else { return }
     let packets = parser.handleData(data)
 
-    DispatchQueue.global(qos: .background).async {
-      for packet in packets {
-        self.gameState?.onReceivePacket(
-          peripheral: peripheral.identifier.uuidString, packet: packet)
-      }
+    //    DispatchQueue.global(qos: .background).async {
+    for packet in packets {
+      self.gameState?.onReceivePacket(
+        peripheral: peripheral.identifier.uuidString, packet: packet)
     }
+    //    }
   }
 }

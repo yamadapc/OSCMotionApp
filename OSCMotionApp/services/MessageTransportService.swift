@@ -91,11 +91,11 @@ class MessageTransportService {
 
     do {
       for message in messages {
-        sendMIDI(
-          midiChannel: midiChannel,
-          midiMessageConfiguration: messageConfiguration[message.id]?.midi,
-          value: message.value
-        )
+        //        sendMIDI(
+        //          midiChannel: midiChannel,
+        //          midiMessageConfiguration: messageConfiguration[message.id]?.midi,
+        //          value: message.value
+        //        )
 
         let message = OSCMessage(
           "/sensor/\(id)/\(message.id)",
@@ -150,15 +150,15 @@ class MessageTransportService {
       return [
         Message(
           id: "angvel/x",
-          value: x / 1000
+          value: (x / 1000) * 10
         ),
         Message(
           id: "angvel/y",
-          value: y / 1000
+          value: (y / 1000) * 10
         ),
         Message(
           id: "angvel/z",
-          value: z / 1000
+          value: (z / 1000) * 10
         ),
       ]
     }
