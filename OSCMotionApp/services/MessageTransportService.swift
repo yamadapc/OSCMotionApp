@@ -68,6 +68,12 @@ struct Message {
   let value: Double
 }
 
+private let eventLogger = EventLogger()
+private func logMessage(_ id: String, _ value: Double) {
+  let timestamp = Date().timeIntervalSince1970
+  eventLogger?.logEvent("\(timestamp) \(id) \(value)")
+}
+
 /// Sends data through MIDI and OSC
 class MessageTransportService {
   let oscClient = OSCClient()
@@ -91,11 +97,13 @@ class MessageTransportService {
 
     do {
       for message in messages {
-        //        sendMIDI(
-        //          midiChannel: midiChannel,
-        //          midiMessageConfiguration: messageConfiguration[message.id]?.midi,
-        //          value: message.value
-        //        )
+        // sendMIDI(
+        //     midiChannel: midiChannel,
+        //     midiMessageConfiguration: messageConfiguration[message.id]?.midi,
+        //     value: message.value
+        // )
+
+        logMessage("/sensor/\(id)/\(message.id)", message.value)
 
         let message = OSCMessage(
           "/sensor/\(id)/\(message.id)",

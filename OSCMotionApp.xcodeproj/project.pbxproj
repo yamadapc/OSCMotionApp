@@ -63,6 +63,8 @@
 		CB67C68A2BC10EFF00643884 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C6892BC10EFF00643884 /* Collections */; };
 		CB67C68C2BC10EFF00643884 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C68B2BC10EFF00643884 /* HashTreeCollections */; };
 		CB67C68E2BC10EFF00643884 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CB67C68D2BC10EFF00643884 /* OrderedCollections */; };
+		CB67C6902BC678AB00643884 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C68F2BC678AB00643884 /* EventLogger.swift */; };
+		CB67C6912BC678AB00643884 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67C68F2BC678AB00643884 /* EventLogger.swift */; };
 		CBCB3F6D2BA9C9FC00297FAB /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6C2BA9C9FC00297FAB /* MIDIKit */; };
 		CBCB3F6F2BA9C9FC00297FAB /* MIDIKitControlSurfaces in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F6E2BA9C9FC00297FAB /* MIDIKitControlSurfaces */; };
 		CBCB3F712BA9C9FC00297FAB /* MIDIKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = CBCB3F702BA9C9FC00297FAB /* MIDIKitCore */; };
@@ -117,6 +119,7 @@
 		CB67C66A2BBCB43500643884 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CB67C66F2BBCB68800643884 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
 		CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTransportService.swift; sourceTree = "<group>"; };
+		CB67C68F2BC678AB00643884 /* EventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
 		CBDBB67D2BB762E400321A56 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CBDBB67F2BB762FE00321A56 /* SensorDataPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataPacket.swift; sourceTree = "<group>"; };
 		CBDBB6812BB764E500321A56 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
@@ -307,6 +310,7 @@
 			children = (
 				CBDBB6972BB7669400321A56 /* bluetooth */,
 				CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */,
+				CB67C68F2BC678AB00643884 /* EventLogger.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -533,6 +537,7 @@
 				CBDBB6802BB762FE00321A56 /* SensorDataPacket.swift in Sources */,
 				CBDBB6902BB765EF00321A56 /* midiManager.swift in Sources */,
 				CB67C66B2BBCB43500643884 /* Colors.swift in Sources */,
+				CB67C6902BC678AB00643884 /* EventLogger.swift in Sources */,
 				738C9C632572D24B0005A2A2 /* OSCMotionApp.swift in Sources */,
 				CB67C6762BBF3D2C00643884 /* MessageTransportService.swift in Sources */,
 				738C9C6F2572D24C0005A2A2 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
@@ -572,6 +577,7 @@
 				CB67C64D2BBCB08A00643884 /* SensorDataPacket.swift in Sources */,
 				CB67C64E2BBCB08A00643884 /* midiManager.swift in Sources */,
 				CB67C66C2BBCB43500643884 /* Colors.swift in Sources */,
+				CB67C6912BC678AB00643884 /* EventLogger.swift in Sources */,
 				CB67C6502BBCB08A00643884 /* OSCMotionApp.swift in Sources */,
 				CB67C6772BBF3D2C00643884 /* MessageTransportService.swift in Sources */,
 				CB67C6512BBCB08A00643884 /* WT901BLECL_Demo.xcdatamodeld in Sources */,
