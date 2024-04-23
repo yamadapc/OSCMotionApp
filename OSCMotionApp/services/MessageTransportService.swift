@@ -142,31 +142,39 @@ class MessageTransportService {
     case .acceleration(let x, let y, let z, temperature: _):
       return [
         Message(
+          id: "acc/a",
+          value: fabs(x) + fabs(y) + fabs(z)
+        ),
+        Message(
           id: "acc/x",
-          value: x * 2
+          value: fabs(x) * 2
         ),
         Message(
           id: "acc/y",
-          value: y * 2
+          value: fabs(y) * 2
         ),
         Message(
           id: "acc/z",
-          value: z * 2
+          value: fabs(z) * 2
         ),
       ]
     case .angularVelocity(let x, let y, let z, temperature: _):
       return [
         Message(
+          id: "angvel/a",
+          value: ((fabs(x) / 300) + (fabs(y) / 300) + (fabs(z) / 300)) * 10
+        ),
+        Message(
           id: "angvel/x",
-          value: (x / 1000) * 10
+          value: (fabs(x) / 1000) * 10
         ),
         Message(
           id: "angvel/y",
-          value: (y / 1000) * 10
+          value: (fabs(y) / 1000) * 10
         ),
         Message(
           id: "angvel/z",
-          value: (z / 1000) * 10
+          value: (fabs(z) / 1000) * 10
         ),
       ]
     }

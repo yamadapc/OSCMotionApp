@@ -12,7 +12,7 @@ class EventLogger {
   private var buffer: String = ""
   private let fileHandle: FileHandle
   private let queue = DispatchQueue(label: "eventLoggerQueue", attributes: .concurrent)
-  private let bufferLimit = 1000 // Adjust buffer size as needed
+  private let bufferLimit = 1000  // Adjust buffer size as needed
 
   init?() {
     let fileManager = FileManager.default
@@ -59,4 +59,3 @@ class EventLogger {
     buffer.removeAll()
   }
 }
-
