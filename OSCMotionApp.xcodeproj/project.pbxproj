@@ -115,7 +115,7 @@
 		CB67C6302BBCA7B800643884 /* OSCServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCServerConfiguration.swift; sourceTree = "<group>"; };
 		CB67C6342BBCAD8500643884 /* ConfigurationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationState.swift; sourceTree = "<group>"; };
 		CB67C6652BBCB08A00643884 /* OSCMotionAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCMotionAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB67C6662BBCB08A00643884 /* OSCMotionApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSCMotionApp copy-Info.plist"; path = "/Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/OSCMotionApp copy-Info.plist"; sourceTree = "<absolute>"; };
+		CB67C6662BBCB08A00643884 /* OSCMotionApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSCMotionApp-Info.plist"; path = "/Users/yamadapc/Documents/Max 8/Projects/OSCMotion/OSCMotionApp/OSCMotionApp-Info.plist"; sourceTree = "<absolute>"; };
 		CB67C66A2BBCB43500643884 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CB67C66F2BBCB68800643884 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
 		CB67C6752BBF3D2C00643884 /* MessageTransportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTransportService.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 				738C9C612572D24B0005A2A2 /* OSCMotionApp */,
 				738C9C602572D24B0005A2A2 /* Products */,
 				CB67C6272BBCA64300643884 /* Frameworks */,
-				CB67C6662BBCB08A00643884 /* OSCMotionApp copy-Info.plist */,
+				CB67C6662BBCB08A00643884 /* OSCMotionApp-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -855,7 +855,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OSCMotionApp/Preview Content\"";
 				DEVELOPMENT_TEAM = Q39U2SBP6Z;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "OSCMotionApp copy-Info.plist";
+				INFOPLIST_FILE = "OSCMotionApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -881,7 +881,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OSCMotionApp/Preview Content\"";
 				DEVELOPMENT_TEAM = Q39U2SBP6Z;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "OSCMotionApp copy-Info.plist";
+				INFOPLIST_FILE = "OSCMotionApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
